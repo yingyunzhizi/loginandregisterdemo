@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="../js/jquery-1.8.2.js"></script>
+    <script type="text/javascript">
+        function serchNameAndSendEmail() {
+            var name = $("#name").val();
+            location.href="/userController/findUserByName?name="+name;
+        }
+    </script>
+</head>
+<body>
+    输入账号<input type="text" id="name"><br>
+    <input type="button" onclick="serchNameAndSendEmail()" value="找回密码">
+</body>
+</html>
