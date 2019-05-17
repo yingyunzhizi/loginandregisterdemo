@@ -39,8 +39,9 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public User findUserByName(String username) {
-        QueryWrapper queryWrapper = new QueryWrapper();
+        /*QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("username",username);
-        return userMapper.selectOne(queryWrapper);
+        return userMapper.selectOne(queryWrapper);*/
+        return userMapper.findUserByUsername(username);
     }
 }

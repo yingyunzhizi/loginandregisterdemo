@@ -9,7 +9,7 @@
     <result column="email" property="email" jdbcType="VARCHAR" />
   </resultMap>
 
-  <!--<update id="updatePwById" >
-    update t_user u set u.password = #{newPassword} where u.id=#{id}
-  </update>-->
+  <select id="findUserByUsername" resultMap="BaseResultMap">
+    select * from t_user u where u.username=#{username}
+  </select>
 </mapper>
